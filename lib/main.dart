@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'screens/initial_screen.dart';
+import 'screens/recipe/recipe_screen.dart';
 // import 'screens/login/login_screen.dart';
 
 void main() {
@@ -10,8 +11,9 @@ void main() {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: InitialScreen(),
+      // home: InitialScreen(),
       // home: LoginScreen(),
+      home: RecipeScreen(),
     ),
   );
 }
