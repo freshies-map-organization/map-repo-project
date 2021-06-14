@@ -1,4 +1,0 @@
-#Mon Jun 14 15:23:04 SGT 2021
-base.0=H\:\\flutterProject\\map-repo-project\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
-renamed.0=classes.dex
-path.0=classes.dex
