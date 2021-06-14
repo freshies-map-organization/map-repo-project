@@ -2,10 +2,10 @@
 
 # Local JSON-Server
 ### Change the IP address below to your PC's IP address. Remain the port number 3000 unchanged
-# @baseUrl = http://192.168.43.91:3000
+# @baseUrl = http://192.168.0.5:3000
 
 # Local Firebase Emulator 
-# @baseUrl = http://192.168.43.91:5001/mvvm-frontend-and-mvc-backend/us-central1/api
+# @baseUrl = http://192.168.0.5:5001/mvvm-frontend-and-mvc-backend/us-central1/api
 
 # Live Firebase
 @baseUrl = https://us-central1-mvvm-frontend-and-mvc-backend.cloudfunctions.net/api
