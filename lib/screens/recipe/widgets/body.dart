@@ -41,7 +41,7 @@ class Body extends StatelessWidget {
             // displays the index of the current item.
             (context, index) => ListTile(title: Text('Item #$index')),
             // Builds 1000 ListTiles
-            childCount: 20,
+            childCount: 5,
           ),
         ),
       ],
