@@ -6,6 +6,7 @@ import '../screens/recipe/recipe_screen.dart';
 
 Route<dynamic> createRoute(settings) {
   switch (settings.name) {
+    case '/':
     case '/main':
       return MainScreen.route();
 
@@ -30,7 +31,6 @@ Route<dynamic> createRoute(settings) {
     //   case '/profile':
     //   return;
 
-    case '/':
     case '/recipe':
       return RecipeScreen.route();
 
