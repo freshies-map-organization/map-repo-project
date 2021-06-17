@@ -10,7 +10,7 @@ void main() {
     MaterialApp(
       title: 'MVVM Template',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(primarySwatch: Colors.blue),
+      theme: ThemeData(primarySwatch: Colors.green),
       initialRoute: '/',
       onGenerateRoute: createRoute,
     ),

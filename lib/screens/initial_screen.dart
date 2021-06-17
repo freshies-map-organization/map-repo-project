@@ -6,7 +6,7 @@ class InitialScreen extends StatelessWidget {
     return Container(
       child: Icon(
         Icons.access_alarms,
-        color: Colors.blue,
+        color: Colors.green,
         size: 30.0,
       ),
     );

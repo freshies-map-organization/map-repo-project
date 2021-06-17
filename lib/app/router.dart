@@ -4,17 +4,19 @@ import 'package:flutter/material.dart';
 import '../screens/login/login_screen.dart';
 import '../screens/main/main_screen.dart';
 import '../screens/recipe/recipe_screen.dart';
+import '../screens/sign_up/signup_screen.dart';
 
 Route<dynamic> createRoute(settings) {
   switch (settings.name) {
+    case '/':
     case '/main':
       return MainScreen.route();
 
     case '/login':
       return LoginScreen.route();
 
-    // case '/sign_up':
-    //   return;
+    case '/sign_up':
+      return SignUpScreen.route();
 
     //   case '/bookmark':
     //   return;
@@ -31,7 +33,6 @@ Route<dynamic> createRoute(settings) {
     //   case '/profile':
     //   return;
 
-    case '/':
     case '/recipe':
       return RecipeScreen.route(data: settings.arguments as Recipe);
 
