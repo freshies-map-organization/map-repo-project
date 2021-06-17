@@ -1,3 +1,4 @@
+import 'package:exercise3/models/recipe.dart';
 import 'package:flutter/material.dart';
 
 import '../screens/login/login_screen.dart';
@@ -6,7 +7,6 @@ import '../screens/recipe/recipe_screen.dart';
 
 Route<dynamic> createRoute(settings) {
   switch (settings.name) {
-    case '/':
     case '/main':
       return MainScreen.route();
 
@@ -31,8 +31,9 @@ Route<dynamic> createRoute(settings) {
     //   case '/profile':
     //   return;
 
+    case '/':
     case '/recipe':
-      return RecipeScreen.route();
+      return RecipeScreen.route(data: settings.arguments as Recipe);
 
     //   case '/search_by_ingredient':
     //   return;

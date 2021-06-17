@@ -5,9 +5,11 @@ import '../screens/user/user_viewmodel.dart';
 
 import '../services/auth/auth_service.dart';
 import '../services/counter/counter_service.dart';
+import '../services/recipe/recipe_service.dart';
 
 import '../services/auth/auth_service_rest.dart';
 import '../services/counter/counter_service_rest.dart';
+import '../services/recipe/recipe_service_rest.dart';
 
 // import '../services/auth/auth_service_mock.dart';
 // import '../services/counter/counter_service_mock.dart';
@@ -30,6 +32,7 @@ void init() {
 
   dependency.registerLazySingleton<CounterService>(() => CounterServiceRest());
   dependency.registerLazySingleton<AuthService>(() => AuthServiceRest());
+  dependency.registerLazySingleton<RecipeService>(() => RecipeServiceRest());
   // dependency.registerLazySingleton<CounterService>(() => CounterServiceMock());
   // dependency.registerLazySingleton<AuthService>(() => AuthServiceMock());
 

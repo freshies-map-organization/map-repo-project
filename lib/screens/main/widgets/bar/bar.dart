@@ -19,7 +19,7 @@ class Bar extends StatelessWidget implements PreferredSizeWidget {
       title: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('Flutter Counter with MVVM'),
+          Text('EzCook'),
           Text(
             _title,
             style: TextStyle(fontSize: 12.0),
