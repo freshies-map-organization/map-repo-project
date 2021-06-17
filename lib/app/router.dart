@@ -5,6 +5,8 @@ import '../screens/login/login_screen.dart';
 import '../screens/main/main_screen.dart';
 import '../screens/recipe/recipe_screen.dart';
 import '../screens/sign_up/signup_screen.dart';
+import '../screens/home_recipe/homerecipe_screen.dart';
+import '../screens/profile/profile_screen.dart';
 
 Route<dynamic> createRoute(settings) {
   switch (settings.name) {
@@ -30,8 +32,11 @@ Route<dynamic> createRoute(settings) {
     //   case '/my_recipe':
     //   return;
 
-    //   case '/profile':
-    //   return;
+    case '/profile':
+      return ProfileScreen.route();
+
+    case '/home_recipe':
+      return HomeRecipeScreen.route();
 
     case '/recipe':
       return RecipeScreen.route(data: settings.arguments as Recipe);
