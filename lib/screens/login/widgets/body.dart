@@ -23,7 +23,9 @@ class Body extends StatelessWidget {
       builder: (context, viewmodel, _) => Column(
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          _buildButtons3(context, viewmodel),
           _buildTextField(
               hint: 'Username',
               icon: Icons.people,
@@ -43,7 +45,9 @@ class Body extends StatelessWidget {
               style: TextStyle(color: Colors.red, fontSize: 20.0),
             ),
           SizedBox(height: 10.0),
-          _buildButtons(context, viewmodel)
+          _buildButtons1(context, viewmodel),
+          SizedBox(height: 10.0),
+          _buildButtons2(context, viewmodel),
         ],
       ),
     );
@@ -62,7 +66,7 @@ class Body extends StatelessWidget {
     );
   }
 
-  Row _buildButtons(BuildContext context, LoginViewmodel viewmodel) {
+  Row _buildButtons1(BuildContext context, LoginViewmodel viewmodel) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -74,6 +78,35 @@ class Body extends StatelessWidget {
         ElevatedButton(
           child: Text('Cancel'),
           onPressed: () => _onCancel(context, viewmodel),
+        ),
+        SizedBox(width: 10.0),
+      ],
+    );
+  }
+
+  Row _buildButtons2(BuildContext context, LoginViewmodel viewmodel) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Text('Don\'t have an Account?'),
+        TextButton(
+          child: Text('Sign Up'),
+          onPressed: () => Navigator.pushNamed(context, '/sign_up'),
+        ),
+        SizedBox(width: 10.0),
+      ],
+    );
+  }
+
+  Row _buildButtons3(BuildContext context, LoginViewmodel viewmodel) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Image(
+          image: NetworkImage(
+              'https://japanhome.com.sg/wp-content/uploads/2020/09/Brand-Logo-EZ-Cook-e1602481693995.png'),
+          height: 250,
+          width: 250,
         ),
       ],
     );
