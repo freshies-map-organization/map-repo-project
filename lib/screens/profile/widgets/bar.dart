@@ -25,15 +25,13 @@ class Bar extends StatelessWidget implements PreferredSizeWidget {
                 Image.asset('assets/images/home_icon.png', fit: BoxFit.cover),
           ),
           onPressed: () {
-            // do something
+            Navigator.pushNamed(context, '/main');
           },
         ),
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.settings),
-            onPressed: () {
-              // do something
-            },
+            onPressed: () {},
           )
         ]);
   }

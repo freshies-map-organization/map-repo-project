@@ -54,6 +54,7 @@ class Body extends StatelessWidget {
                     ),
                     subtitle: Text(
                         'Lorem ipsum dolor sit amet consectetur adipisicing elit'),
+                    onTap: () => _nextButton(context),
                   ),
                 ),
               ],
@@ -63,4 +64,7 @@ class Body extends StatelessWidget {
       ],
     );
   }
+
+  void _nextButton(BuildContext context) =>
+      Navigator.pushNamed(context, '/recipe');
 }
