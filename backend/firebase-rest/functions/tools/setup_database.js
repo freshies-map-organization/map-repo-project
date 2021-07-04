@@ -40,6 +40,76 @@ const _collectionsJson = {
       counter: 0,
       user: "user2"
     }
+  ],
+  recipes: [
+    {
+      id: "recipe1",
+      user: "user1",
+      title: "Recipe 1",
+      shared : "true",
+      amount: [
+        "amount1", "amount2","amount3","amount4",
+      ],
+      ingredients: [
+        "ingredient1","ingredient2","ingredient3","ingredient4",
+      ],
+      step: [
+        "step1","step2","step3","step4",
+      ],
+      result: "assets/images/anna-pelzer.jpg"
+    },
+    {
+      id: "recipe2",
+      user: "user1",
+      title: "Recipe 2",
+      shared : "true",
+      amount: [
+        "amount1", "amount2","amount3","amount4",
+      ],
+      ingredients: [
+        "ingredient1","ingredient2","ingredient3","ingredient4",
+      ],
+      step: [
+        "step1","step2","step3","step4",
+      ],
+      result: "assets/images/anna-pelzer.jpg"
+    },
+    {
+      id: "recipe3",
+      user: "user1",
+      title: "Recipe 3",
+      shared : "false",
+      amount: [
+        "amount1", "amount2","amount3","amount4",
+      ],
+      ingredients: [
+        "ingredient1","ingredient2","ingredient3","ingredient4",
+      ],
+      step: [
+        "step1","step2","step3","step4",
+      ],
+      result: "assets/images/anna-pelzer.jpg"
+    }
+  ],
+  ingredients: [
+    {
+      id: "ingredient1",
+      name: "Ingredient 1",
+      photoURL: "photoIngredient",
+      ingredientType: "Type1"
+    },
+    {
+      id: "ingredient2",
+      name: "Ingredient 2",
+      photoURL: "photoIngredient",
+      ingredientType: "Type1"
+    },
+    {
+      id: "ingredient3",
+      name: "Ingredient 3",
+      photoURL: "photoIngredient",
+      ingredientType: "Type1"
+    }
   ]
 }
 

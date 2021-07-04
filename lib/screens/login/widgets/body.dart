@@ -91,7 +91,7 @@ class Body extends StatelessWidget {
         Text('Don\'t have an Account?'),
         TextButton(
           child: Text('Sign Up'),
-          onPressed: () => Navigator.pushNamed(context, '/sign_up'),
+          onPressed: () => Navigator.pushNamed(context, '/signUp'),
         ),
         SizedBox(width: 10.0),
       ],

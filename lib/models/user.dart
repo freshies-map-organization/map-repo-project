@@ -1,5 +1,5 @@
 class User {
-  dynamic
+  String
       _id; // Use dynamic type because json-server id is int and firestore id is string
   String _name;
   String _photoUrl;
@@ -24,7 +24,7 @@ class User {
   set password(value) => _password = value;
 
   User(
-      {dynamic id,
+      {String id = '',
       String name = '',
       String photoUrl = '',
       String login = '',

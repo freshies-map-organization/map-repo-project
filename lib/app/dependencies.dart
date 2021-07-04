@@ -1,3 +1,7 @@
+import 'package:exercise3/services/ingredient/ingredient_service.dart';
+import 'package:exercise3/services/ingredient/ingredient_service_rest.dart';
+import 'package:exercise3/services/user/user_service.dart';
+import 'package:exercise3/services/user/user_service_rest.dart';
 import 'package:get_it/get_it.dart';
 
 import '../services/rest.dart';
@@ -33,6 +37,9 @@ void init() {
   dependency.registerLazySingleton<CounterService>(() => CounterServiceRest());
   dependency.registerLazySingleton<AuthService>(() => AuthServiceRest());
   dependency.registerLazySingleton<RecipeService>(() => RecipeServiceRest());
+  dependency
+      .registerLazySingleton<IngredientService>(() => IngredientServiceRest());
+  dependency.registerLazySingleton<UserService>(() => UserServiceRest());
   // dependency.registerLazySingleton<CounterService>(() => CounterServiceMock());
   // dependency.registerLazySingleton<AuthService>(() => AuthServiceMock());
 

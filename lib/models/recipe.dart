@@ -1,12 +1,14 @@
 class Recipe {
-  dynamic _id;
+  String _id;
   String _user;
   String _title;
   String _result;
+  // bool _shared;
+  String _shared;
 
   List _step;
-  int _stepCount;
-  List _amount;
+  // int _stepCount;
+  // List _amount;
   List _ingredient;
 
   get id => _id;
@@ -21,37 +23,71 @@ class Recipe {
   get result => _result;
   set result(value) => _result = value;
 
-  get step => _step;
+  get shared => _shared;
+  set shared(value) => _shared = value;
 
-  get amount => _amount;
+  get step => _step;
+  // set step(value) => _step = value;
 
   get ingredient => _ingredient;
 
-  get stepCount => _stepCount;
-  set stepCount(value) => _stepCount = value;
+  // get amount => _amount;
 
-  Recipe({id, user, title, result})
+  // get stepCount => _stepCount;
+  // set stepCount(value) => _stepCount = value;
+
+  // List listRecipe(value) {
+  //   List recipe = [];
+  //   _step.forEach((value) {
+  //     recipe.add(value);
+  //   });
+  //   return recipe;
+  // }
+
+  Recipe(
+      {String id = '',
+      String user = '',
+      String title = '',
+      String result = '',
+      // bool shared,
+      String shared,
+      List ingredient,
+      List step})
       : _id = id,
         _user = user,
         _title = title,
-        _result = result;
-  // _step = step;
+        _result = result,
+        _shared = shared,
+        _ingredient = ingredient,
+        _step = step;
 
   Recipe.copy(Recipe from)
       : this(
             id: from._id,
             user: from._user,
             title: from._title,
-            result: from._result);
+            result: from._result,
+            shared: from._shared,
+            ingredient: from._ingredient,
+            step: from._step);
 
   Recipe.fromJson(Map<String, dynamic> json)
       : this(
-          id: json['id'],
-          user: json['user'],
-          title: json['title'],
-          result: json['result'],
-        );
+            id: json['id'],
+            user: json['user'],
+            title: json['title'],
+            result: json['result'],
+            shared: json['shared'],
+            ingredient: json['ingredients'],
+            step: json['step']);
 
-  Map<String, dynamic> toJson() =>
-      {'id': id, 'user': user, 'title': title, 'result': result};
+  Map<String, dynamic> toJson() => {
+        'id': id,
+        'user': user,
+        'title': title,
+        'result': result,
+        'shared': shared,
+        'ingredients': ingredient,
+        'step': step,
+      };
 }
