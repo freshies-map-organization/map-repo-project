@@ -7,6 +7,7 @@ import 'widgets/body.dart';
 import 'widgets/float.dart';
 import '../view.dart';
 import 'main_viewmodel.dart';
+import '../EZcookinitial.dart';
 
 class MainScreen extends StatelessWidget {
   static Route route() => MaterialPageRoute(builder: (context) => MainScreen());
@@ -30,7 +31,10 @@ class MainScreen extends StatelessWidget {
               );
             }
 
-            return Scaffold(appBar: UnsignedInBar(mainViewmodel));
+            return Scaffold(
+              appBar: UnsignedInBar(mainViewmodel),
+              body: EZcook(),
+            );
           },
         ),
       ),

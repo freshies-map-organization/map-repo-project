@@ -103,10 +103,9 @@ class Body extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Image(
-          image: NetworkImage(
-              'https://japanhome.com.sg/wp-content/uploads/2020/09/Brand-Logo-EZ-Cook-e1602481693995.png'),
-          height: 250,
-          width: 250,
+          image: AssetImage('assets/images/ezcook.png'),
+          height: 100,
+          width: 100,
         ),
       ],
     );

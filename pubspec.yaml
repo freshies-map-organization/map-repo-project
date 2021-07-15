@@ -24,7 +24,10 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.2
+  extended_image: ^4.1.0
+  font_awesome_flutter: ^9.1.0
   get_it: ^7.1.3
+  google_fonts: ^2.1.0
   http: ^0.13.3
   provider: ^4.3.1
 
@@ -47,6 +50,10 @@ flutter:
     - assets/images/anna-pelzer.jpg
     - assets/images/food.jpg
     - assets/images/home_icon.png
+    - assets/images/ezcook.png
+    - assets/images/foodie.jpg
+    - assets/images/pasta_img.png
+    - assets/images/yummyfood.jpg
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

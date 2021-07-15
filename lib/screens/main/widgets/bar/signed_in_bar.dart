@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import './bar.dart';
 import '../../main_viewmodel.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class SignedInBar extends Bar {
   final MainViewmodel _viewmodel;
@@ -14,8 +15,8 @@ class SignedInBar extends Bar {
       image: NetworkImage(_viewmodel.user.photoUrl),
       button: IconButton(
           icon: Icon(
-            Icons.logout,
-            color: Colors.red,
+            FontAwesomeIcons.lockOpen,
+            //color: Colors.red,
           ),
           onPressed: () => _onPressLogoutButton()),
     );

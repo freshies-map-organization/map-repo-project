@@ -21,8 +21,8 @@ class Body extends StatelessWidget {
     return View(
       viewmodel: SignUpViewmodel(),
       builder: (context, viewmodel, _) => Column(
-        mainAxisSize: MainAxisSize.min,
-        mainAxisAlignment: MainAxisAlignment.start,
+        mainAxisSize: MainAxisSize.max,
+        mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           _buildButtons3(context, viewmodel),
@@ -110,10 +110,9 @@ class Body extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Image(
-          image: NetworkImage(
-              'https://japanhome.com.sg/wp-content/uploads/2020/09/Brand-Logo-EZ-Cook-e1602481693995.png'),
-          height: 200,
-          width: 200,
+          image: AssetImage('assets/images/ezcook.png'),
+          height: 100,
+          width: 100,
         ),
       ],
     );

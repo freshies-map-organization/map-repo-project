@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+// import 'unsigned_in_bar.dart';
+// import 'package:exercise3/screens/main/main_viewmodel.dart';
+// import 'package:exercise3/screens/view.dart';
+// import 'signed_in_bar.dart';
 
 class Bar extends StatelessWidget implements PreferredSizeWidget {
   @override
@@ -15,11 +19,19 @@ class Bar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      leading: CircleAvatar(backgroundImage: _image),
+      leading: CircleAvatar(
+        backgroundImage: _image,
+        backgroundColor: Colors.blueGrey,
+      ),
       title: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('EzCook'),
+          Text(
+            'EzCook',
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+            ),
+          ),
           Text(
             _title,
             style: TextStyle(fontSize: 12.0),

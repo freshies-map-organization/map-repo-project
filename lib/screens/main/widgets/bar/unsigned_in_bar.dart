@@ -1,5 +1,6 @@
 import 'package:exercise3/screens/main/main_viewmodel.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import './bar.dart';
 
@@ -11,9 +12,9 @@ class UnsignedInBar extends Bar {
   Widget build(BuildContext context) {
     return Bar(
         title: 'Please log in',
-        image: AssetImage('assets/images/unknown_user.png'),
+        image: AssetImage('assets/images/yummyfood.jpg'),
         button: IconButton(
-            icon: Icon(Icons.login),
+            icon: Icon(FontAwesomeIcons.signInAlt),
             onPressed: () => _onPressLoginButton(context)));
   }
 
