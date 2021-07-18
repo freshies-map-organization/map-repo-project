@@ -5,7 +5,6 @@ import 'package:exercise3/screens/view.dart';
 import 'package:flutter/material.dart';
 
 import 'homerecipe_viewmodel.dart';
-import 'widgets/bar.dart';
 import 'widgets/body.dart';
 
 class HomeRecipeScreen extends StatefulWidget {
@@ -32,7 +31,6 @@ class _HomeRecipeScreenState extends State<HomeRecipeScreen> {
                   HomeRecipeViewModel(mainViewmodel: mainViewmodel);
 
               return Scaffold(
-                // appBar: Bar(),
                 key: mainDrawerKey,
                 drawer: SideDrawer(_recipeViewmodel),
                 body: Body(_recipeViewmodel, mainDrawerKey),

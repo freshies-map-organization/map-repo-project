@@ -2,6 +2,8 @@ class User {
   String
       _id; // Use dynamic type because json-server id is int and firestore id is string
   String _name;
+  int _age;
+  String _occupation;
   String _photoUrl;
   String _login;
   String _password;
@@ -13,6 +15,12 @@ class User {
 
   get name => _name;
   set name(value) => _name = value;
+
+  get age => _age;
+  set age(value) => _age = value;
+
+  get occupation => _occupation;
+  set occupation(value) => _occupation = value;
 
   get photoUrl => _photoUrl;
   set photoUrl(value) => _photoUrl = value;
@@ -26,6 +34,8 @@ class User {
   User(
       {String id = '',
       String name = '',
+      String age = '',
+      String occupation = '',
       String photoUrl = '',
       String login = '',
       String password = ''})
@@ -34,10 +44,13 @@ class User {
         _photoUrl = photoUrl,
         _login = login,
         _password = password;
+
   User.copy(User from)
       : this(
             id: from.id,
             name: from.name,
+            age: from.age,
+            occupation: from.occupation,
             photoUrl: from.photoUrl,
             login: from.login,
             password: from.password);
@@ -46,6 +59,8 @@ class User {
       : this(
           id: json['id'],
           name: json['name'],
+          age: json['age'],
+          occupation: json['occupation'],
           photoUrl: json['photoUrl'],
           login: json['login'],
           password: json['password'],
@@ -54,6 +69,8 @@ class User {
   Map<String, dynamic> toJson() => {
         'id': id,
         'name': name,
+        'age': age,
+        'occupation': occupation,
         'photoUrl': photoUrl,
         'login': login,
         'password': password,

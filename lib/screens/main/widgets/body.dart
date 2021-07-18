@@ -12,14 +12,37 @@ class Body extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text('You have pushed the button this many times:'),
-          SizedBox(
-            height: 100.0,
-            child: View(
-                viewmodel: _viewmodel,
-                builder: (_, viewmodel, __) => Text(
-                    '${viewmodel.counter.counter}',
-                    style: Theme.of(context).textTheme.headline4)),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                padding: EdgeInsets.all(20.0),
+                child: IconButton(
+                  icon: Icon(Icons.local_dining),
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/home_recipe');
+                  },
+                ),
+              ),
+              Container(
+                padding: EdgeInsets.all(20.0),
+                child: IconButton(
+                  icon: Icon(Icons.redeem),
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/ingredient');
+                  },
+                ),
+              ),
+            ],
+          ),
+          Container(
+            padding: EdgeInsets.all(20.0),
+            child: IconButton(
+              icon: Icon(Icons.book),
+              onPressed: () {
+                Navigator.pushNamed(context, '/myRecipe');
+              },
+            ),
           ),
         ],
       ),

@@ -1,5 +1,7 @@
 import 'package:exercise3/models/recipe.dart';
+import 'package:exercise3/models/user.dart';
 import 'package:exercise3/screens/main/main_viewmodel.dart';
+import 'package:exercise3/screens/user/user_viewmodel.dart';
 import 'package:exercise3/screens/view.dart';
 import '../../services/recipe/recipe_service.dart';
 
@@ -13,6 +15,9 @@ class HomeRecipeViewModel extends Viewmodel {
   }
 
   RecipeService get service => dependency();
+  UserViewmodel get _userViewmodel => dependency();
+
+  User get user => _userViewmodel.user;
 
   List<Recipe> _recipe;
   get recipe => _recipe;

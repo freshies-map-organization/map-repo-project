@@ -14,6 +14,7 @@ class SideDrawer extends StatefulWidget {
 class _SideDrawerState extends State<SideDrawer> {
   void _profileButton(BuildContext context) =>
       Navigator.pushNamed(context, '/profile');
+
   @override
   Widget build(BuildContext context) {
     return View(
@@ -31,7 +32,7 @@ class _SideDrawerState extends State<SideDrawer> {
                 //Drawer Header
                 InkWell(
                   onTap: () {
-                    // Navigator.pop(context);
+                    Navigator.pop(context);
                     // Navigator.push(context, _logInScreenRoute());
                   },
                   child: Container(
@@ -47,14 +48,14 @@ class _SideDrawerState extends State<SideDrawer> {
                               image: DecorationImage(
                                   fit: BoxFit.fill,
                                   image: AssetImage(
-                                    "assets/icons/ic_profile.png",
+                                    viewmodel.user.photoUrl,
                                   ))),
                         ),
                         Container(
                           padding: EdgeInsets.only(left: 11),
                           child: Text(
                             // userName == null ?
-                            "Sign In"
+                            "${viewmodel.user.name}"
                             //  : userName
                             ,
                             overflow: TextOverflow.ellipsis,
@@ -78,12 +79,8 @@ class _SideDrawerState extends State<SideDrawer> {
                         //Home
                         InkWell(
                           onTap: () {
-                            // Navigator.pop(context);
-                            // Navigator.pushAndRemoveUntil(
-                            //     context,
-                            //     MaterialPageRoute(
-                            //         builder: (context) => HomePage()),
-                            //     (route) => false);
+                            Navigator.pop(context);
+                            Navigator.pushNamed(context, '/main');
                           },
                           child: Container(
                             height: 55,
@@ -198,7 +195,7 @@ class _SideDrawerState extends State<SideDrawer> {
                         //Favourite
                         InkWell(
                           onTap: () {
-                            // Navigator.pop(context);
+                            Navigator.pop(context);
                             // Navigator.push(context, _favouriteScreenRoute());
                           },
                           child: Container(
@@ -275,7 +272,7 @@ class _SideDrawerState extends State<SideDrawer> {
                         //Setting
                         InkWell(
                           onTap: () {
-                            // Navigator.pop(context);
+                            Navigator.pop(context);
                             // Navigator.push(context, _settingScreenRoute());
                           },
                           child: Container(
@@ -315,7 +312,7 @@ class _SideDrawerState extends State<SideDrawer> {
                         //Log out
                         InkWell(
                           onTap: () {
-                            // _logout();
+                            Navigator.pushNamed(context, "/main");
                           },
                           child: Container(
                             height: 55,
