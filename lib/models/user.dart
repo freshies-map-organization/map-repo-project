@@ -34,13 +34,15 @@ class User {
   User(
       {String id = '',
       String name = '',
-      String age = '',
+      int age,
       String occupation = '',
       String photoUrl = '',
       String login = '',
       String password = ''})
       : _id = id,
         _name = name,
+        _age = age,
+        _occupation = occupation,
         _photoUrl = photoUrl,
         _login = login,
         _password = password;

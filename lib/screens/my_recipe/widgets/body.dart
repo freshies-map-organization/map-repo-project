@@ -23,7 +23,10 @@ class Body extends StatelessWidget {
 
   ListView _buildFoodListView() {
     if (_myRecipeModel.recipe.length > 0)
-      return ListView.builder(
+      return ListView.separated(
+          separatorBuilder: (context, index) => Divider(
+                color: Colors.white,
+              ),
           itemCount: _myRecipeModel.recipe.length,
           itemBuilder: (context, index) {
             return ListTile(
@@ -56,7 +59,6 @@ class Body extends StatelessWidget {
   }
 
   void _onEdit(BuildContext context, index) {
-    print('a');
     Navigator.pushNamed(context, '/editRecipe',
         arguments: Recipe.copy(_myRecipeModel.recipe[index]));
   }

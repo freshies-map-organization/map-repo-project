@@ -3,13 +3,10 @@ class Recipe {
   String _user;
   String _title;
   String _result;
-  // bool _shared;
   String _description;
   String _shared;
 
   List _step;
-  // int _stepCount;
-  // List _amount;
   List _ingredient;
 
   get id => _id;
@@ -35,25 +32,11 @@ class Recipe {
 
   get ingredient => _ingredient;
 
-  // get amount => _amount;
-
-  // get stepCount => _stepCount;
-  // set stepCount(value) => _stepCount = value;
-
-  // List listRecipe(value) {
-  //   List recipe = [];
-  //   _step.forEach((value) {
-  //     recipe.add(value);
-  //   });
-  //   return recipe;
-  // }
-
   Recipe(
       {String id = '',
       String user = '',
       String title = '',
       String result = '',
-      // bool shared,
       String description = '',
       String shared,
       List ingredient,
