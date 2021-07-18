@@ -36,6 +36,20 @@ class Body extends StatelessWidget {
                 onChanged: (value) => viewmodel.title = value,
               ),
               SizedBox(
+                height: 10.0,
+              ),
+              TextFormField(
+                decoration: InputDecoration(
+                    border: UnderlineInputBorder(), labelText: 'Description'),
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Enter recipe description';
+                  }
+                  return null;
+                },
+                onChanged: (value) => viewmodel.description = value,
+              ),
+              SizedBox(
                 height: 30.0,
               ),
               Text("Ingredient"),

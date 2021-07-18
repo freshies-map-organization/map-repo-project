@@ -12,14 +12,15 @@ class Body extends StatelessWidget {
           pinned: true,
           expandedHeight: 200.0,
           flexibleSpace: FlexibleSpaceBar(
-              title: Text('Recipe'),
+              title: Text('${_data.title}'),
               background: Image(
-                image: AssetImage('assets/images/anna-pelzer.jpg'),
+                // image: AssetImage('assets/images/anna-pelzer.jpg'),
+                image: AssetImage(_data.result),
                 fit: BoxFit.fitWidth,
               )),
         ),
         SliverAppBar(
-            pinned: true,
+            pinned: false,
             expandedHeight: 5.0,
             flexibleSpace: FlexibleSpaceBar(
               title: Text('Ingredient'),
@@ -36,38 +37,43 @@ class Body extends StatelessWidget {
               return Container(
                 alignment: Alignment.center,
                 color: Colors.teal[100],
-                child: Text('$index'),
+                child: Text('${_data.ingredient[index]}'),
               );
             },
-            childCount: 8,
+            childCount: _data.ingredient.length,
           ),
         ),
         SliverAppBar(
-            pinned: true,
+            pinned: false,
             expandedHeight: 5.0,
             flexibleSpace: FlexibleSpaceBar(
               title: Text('Step'),
             )),
         SliverList(
-            delegate: SliverChildListDelegate(
-                List.generate(5, (index) => CustomWidget(index)).toList())),
+            delegate: SliverChildListDelegate(List.generate(
+                    _data.step.length, (index) => CustomWidget(index, _data))
+                .toList())),
       ]),
     );
   }
 }
 
 class CustomWidget extends StatelessWidget {
-  CustomWidget(this._index) {
+  CustomWidget(this._index, this._data) {
     debugPrint('initialize: $_index');
   }
   final int _index;
+  final _data;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(
+    BuildContext context,
+  ) {
     return Container(
       height: 100,
+      padding: EdgeInsets.all(20.0),
       color: Colors.grey,
-      child: Text('index: $_index', style: TextStyle(fontSize: 18)),
+      child: Text('${_data.step[_index]}', style: TextStyle(fontSize: 18)),
     );
   }
 }

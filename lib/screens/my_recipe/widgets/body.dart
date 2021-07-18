@@ -30,7 +30,7 @@ class Body extends StatelessWidget {
           itemBuilder: (context, index) {
             return ListTile(
               title: Text('${_myRecipeModel.recipe[index].title}'),
-              subtitle: Text('ss'),
+              subtitle: Text('${_myRecipeModel.recipe[index].description}'),
               trailing: Wrap(spacing: 2, children: <Widget>[
                 IconButton(
                   icon: Icon(Icons.edit),

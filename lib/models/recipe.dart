@@ -4,6 +4,7 @@ class Recipe {
   String _title;
   String _result;
   // bool _shared;
+  String _description;
   String _shared;
 
   List _step;
@@ -19,6 +20,9 @@ class Recipe {
 
   get title => _title;
   set title(value) => _title = value;
+
+  get description => _description;
+  set description(value) => _description = value;
 
   get result => _result;
   set result(value) => _result = value;
@@ -50,6 +54,7 @@ class Recipe {
       String title = '',
       String result = '',
       // bool shared,
+      String description = '',
       String shared,
       List ingredient,
       List step})
@@ -57,6 +62,7 @@ class Recipe {
         _user = user,
         _title = title,
         _result = result,
+        _description = description,
         _shared = shared,
         _ingredient = ingredient,
         _step = step;
@@ -67,6 +73,7 @@ class Recipe {
             user: from._user,
             title: from._title,
             result: from._result,
+            description: from._description,
             shared: from._shared,
             ingredient: from._ingredient,
             step: from._step);
@@ -77,6 +84,7 @@ class Recipe {
             user: json['user'],
             title: json['title'],
             result: json['result'],
+            description: json['description'],
             shared: json['shared'],
             ingredient: json['ingredients'],
             step: json['step']);
@@ -86,6 +94,7 @@ class Recipe {
         'user': user,
         'title': title,
         'result': result,
+        'description': description,
         'shared': shared,
         'ingredients': ingredient,
         'step': step,

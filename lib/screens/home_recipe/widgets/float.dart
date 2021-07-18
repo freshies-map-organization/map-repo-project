@@ -38,10 +38,4 @@ class Float extends StatelessWidget {
       ],
     );
   }
-
-  // void _onPressPlusButton(BuildContext context) async {
-  //   final _recipe = await Navigator.pushNamed(context, '/newRecipe');
-
-  //   if (_recipe != null) {}
-  // }
 }

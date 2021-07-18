@@ -1,6 +1,8 @@
 import 'package:exercise3/models/recipe.dart';
+import 'package:exercise3/screens/main/main_viewmodel.dart';
 import 'package:flutter/material.dart';
 
+import '../view.dart';
 import 'widgets/bar.dart';
 import 'widgets/body.dart';
 
@@ -17,12 +19,19 @@ class RecipeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        appBar: Bar(),
-        body: Body(
-          data: _data,
-        ),
+    return WillPopScope(
+      onWillPop: () => Future.value(true),
+      child: SafeArea(
+        child: View(
+            viewmodel: MainViewmodel(),
+            builder: (_, mainViewmodel, __) {
+              return Scaffold(
+                appBar: Bar(),
+                body: Body(
+                  data: _data,
+                ),
+              );
+            }),
       ),
     );
   }

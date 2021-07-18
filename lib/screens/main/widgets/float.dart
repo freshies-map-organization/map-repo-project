@@ -15,9 +15,6 @@ class Float extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             FloatingActionButton(
-                child: Icon(Icons.account_circle_rounded),
-                onPressed: () => _profileButton(context)),
-            FloatingActionButton(
               tooltip: 'Increase counter',
               child: Icon(Icons.add),
               heroTag: null,
@@ -38,7 +35,4 @@ class Float extends StatelessWidget {
 
   void _nextButton(BuildContext context) =>
       Navigator.pushNamed(context, '/home_recipe');
-
-  void _profileButton(BuildContext context) =>
-      Navigator.pushNamed(context, '/profile');
 }

@@ -21,13 +21,6 @@ const _collectionsJson = {
       login: "alex",
       password: "123"
     },
-    {
-      id: "user2",
-      name: "Jessica Walters",
-      photoUrl: "https://randomuser.me/api/portraits/thumb/women/75.jpg",
-      login: "jessica",
-      password: "123"
-    }
   ],
   counters: [
     {
@@ -46,6 +39,7 @@ const _collectionsJson = {
       id: "recipe1",
       user: "user1",
       title: "Recipe 1",
+      description: "This is the first recipe",
       shared : "true",
       amount: [
         "amount1", "amount2","amount3","amount4",
@@ -62,6 +56,7 @@ const _collectionsJson = {
       id: "recipe2",
       user: "user1",
       title: "Recipe 2",
+      description: "This is the second recipe",
       shared : "true",
       amount: [
         "amount1", "amount2","amount3","amount4",
@@ -78,6 +73,7 @@ const _collectionsJson = {
       id: "recipe3",
       user: "user1",
       title: "Recipe 3",
+      description: "This is the third recipe",
       shared : "false",
       amount: [
         "amount1", "amount2","amount3","amount4",

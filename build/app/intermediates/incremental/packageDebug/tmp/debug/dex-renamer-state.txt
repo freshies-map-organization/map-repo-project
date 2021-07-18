@@ -1,4 +1,4 @@
-#Sun Jul 04 21:38:26 SGT 2021
+#Sun Jul 18 18:47:05 SGT 2021
 base.0=H\:\\flutterProject\\map-repo-project\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 renamed.0=classes.dex
 path.0=classes.dex

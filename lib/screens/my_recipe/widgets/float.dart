@@ -11,12 +11,9 @@ class Float extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            FloatingActionButton(
-                child: Icon(Icons.add),
-                heroTag: null,
-                onPressed: () => Navigator.pushNamed(context, '/newRecipe')
-                // _onPressPlusButton(context),
-                ),
+            FloatingActionButton.extended(
+                onPressed: () => Navigator.pushNamed(context, '/newRecipe'),
+                label: Text("Add Recipe")),
           ],
         ),
       ],

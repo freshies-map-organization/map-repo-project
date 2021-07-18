@@ -20,12 +20,17 @@ class CreateRecipeViewModel extends Viewmodel {
   String _stepTwo;
   String _ingredientOne;
   String _ingredientTwo;
+  String _title;
+  String _description;
 
   get recipe => _newRecipe;
   set recipe(value) => _newRecipe = value;
 
-  get title => _newRecipe.title;
-  set title(value) => _newRecipe.title = value;
+  get title => _title;
+  set title(value) => _title = value;
+
+  get description => _description;
+  set description(value) => _description = value;
 
   // get user => _newRecipe.user;
   // set user(value) => _newRecipe.user = value;
@@ -40,10 +45,10 @@ class CreateRecipeViewModel extends Viewmodel {
   // set step(value) => _newRecipe.step = value;
 
   get stepOne => _stepOne;
-  set stepOne(value) => stepOne = value;
+  set stepOne(value) => _stepOne = value;
 
   get stepTwo => _stepTwo;
-  set stepTwo(value) => stepTwo = value;
+  set stepTwo(value) => _stepTwo = value;
 
   get ingredientOne => _ingredientOne;
   set ingredientOne(value) => _ingredientOne = value;
@@ -59,6 +64,7 @@ class CreateRecipeViewModel extends Viewmodel {
     Recipe recipe = new Recipe(
       title: title,
       user: user.id,
+      description: description,
       step: [stepOne, stepTwo],
       ingredient: [ingredientOne, ingredientTwo],
       result: "assets/images/anna-pelzer.jpg",

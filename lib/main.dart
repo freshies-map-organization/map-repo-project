@@ -8,7 +8,7 @@ void main() {
 
   runApp(
     MaterialApp(
-      title: 'MVVM Template',
+      title: 'EzCook App',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.blueGrey),
       darkTheme: ThemeData(brightness: Brightness.dark),

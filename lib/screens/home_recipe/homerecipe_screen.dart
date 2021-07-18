@@ -1,4 +1,5 @@
 import 'package:exercise3/screens/home_recipe/widgets/float.dart';
+import 'package:exercise3/screens/home_recipe/widgets/sideDrawer.dart';
 import 'package:exercise3/screens/main/main_viewmodel.dart';
 import 'package:exercise3/screens/view.dart';
 import 'package:flutter/material.dart';
@@ -16,6 +17,8 @@ class HomeRecipeScreen extends StatefulWidget {
 }
 
 class _HomeRecipeScreenState extends State<HomeRecipeScreen> {
+  final GlobalKey<ScaffoldState> mainDrawerKey = GlobalKey();
+
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
@@ -29,9 +32,11 @@ class _HomeRecipeScreenState extends State<HomeRecipeScreen> {
                   HomeRecipeViewModel(mainViewmodel: mainViewmodel);
 
               return Scaffold(
-                appBar: Bar(),
-                body: Body(_recipeViewmodel),
-                floatingActionButton: Float(_recipeViewmodel),
+                // appBar: Bar(),
+                key: mainDrawerKey,
+                drawer: SideDrawer(_recipeViewmodel),
+                body: Body(_recipeViewmodel, mainDrawerKey),
+                // floatingActionButton: Float(_recipeViewmodel),
               );
             }),
       ),
