@@ -1,7 +1,6 @@
-import 'package:exercise3/models/recipe.dart';
-import 'package:exercise3/models/user.dart';
-import 'package:exercise3/screens/main/main_viewmodel.dart';
-import 'package:exercise3/screens/user/user_viewmodel.dart';
+import '../../models/recipe.dart';
+import '../../models/user.dart';
+import '../user/user_viewmodel.dart';
 import 'package:exercise3/services/recipe/recipe_service.dart';
 
 import '../../app/dependencies.dart';
@@ -11,7 +10,6 @@ class MyRecipeViewModel extends Viewmodel {
   final MyRecipeViewModel _mainViewmodel;
   MyRecipeViewModel({mainViewmodel}) : _mainViewmodel = mainViewmodel {
     _loadMyRecipe();
-    // _loadAllRecipe();
   }
 
   RecipeService get service => dependency();

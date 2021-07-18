@@ -1,11 +1,10 @@
-import 'package:exercise3/models/recipe.dart';
-import 'package:exercise3/models/user.dart';
-import 'package:exercise3/screens/main/main_viewmodel.dart';
-import 'package:exercise3/screens/user/user_viewmodel.dart';
-import 'package:exercise3/screens/view.dart';
+import '../../app/dependencies.dart';
+import '../../models/recipe.dart';
+import '../../models/user.dart';
 import '../../services/recipe/recipe_service.dart';
 
-import '../../app/dependencies.dart';
+import '../user/user_viewmodel.dart';
+import '../main/main_viewmodel.dart';
 import '../viewmodel.dart';
 
 class HomeRecipeViewModel extends Viewmodel {
@@ -28,8 +27,4 @@ class HomeRecipeViewModel extends Viewmodel {
   set futureRecipe(value) => _futureRecipe = value;
 
   void _loadRecipe() => _futureRecipe = service.getSharedRecipe();
-
-  // void addRecipe(Recipe recipe) async {
-  //   Recipe _recipe = service.addRecipe(recipe);
-  // }
 }

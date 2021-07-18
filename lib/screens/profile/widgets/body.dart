@@ -1,7 +1,7 @@
-import 'package:exercise3/screens/profile/profile_viewmodel.dart';
-import 'package:exercise3/screens/view.dart';
 import 'package:flutter/material.dart';
-import '../profile_screen.dart';
+
+import '../../../screens/profile/profile_viewmodel.dart';
+import '../../../screens/view.dart';
 
 class Body extends StatelessWidget {
   final ProfileViewModel _profileViewModel;

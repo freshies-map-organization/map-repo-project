@@ -1,13 +1,14 @@
-import 'package:exercise3/screens/main/main_viewmodel.dart';
-import 'package:exercise3/screens/my_recipe/my_recipe_viewmodel.dart';
-import 'package:exercise3/screens/my_recipe/widgets/bar.dart';
-import 'package:exercise3/screens/my_recipe/widgets/body.dart';
-import 'package:exercise3/screens/my_recipe/widgets/float.dart';
-import 'package:exercise3/screens/view.dart';
 import 'package:flutter/material.dart';
 
+import '../../screens/view.dart';
+
+import 'my_recipe_viewmodel.dart';
+
+import 'widgets/bar.dart';
+import 'widgets/body.dart';
+import 'widgets/float.dart';
+
 class MyRecipeScreen extends StatefulWidget {
-  // const MyRecipeScreen({ Key? key }) : super(key: key);
   static Route route() =>
       MaterialPageRoute(builder: (context) => MyRecipeScreen());
 

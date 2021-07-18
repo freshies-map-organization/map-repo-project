@@ -1,10 +1,7 @@
-import 'package:exercise3/models/recipe.dart';
-import 'package:exercise3/screens/main/counter_viewmodel.dart';
-import 'package:exercise3/screens/view.dart';
-import 'package:exercise3/screens/home_recipe/widgets/sideDrawer.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
+import '../../../models/recipe.dart';
 import '../homerecipe_viewmodel.dart';
 
 class Body extends StatelessWidget {
@@ -251,155 +248,6 @@ class Body extends StatelessWidget {
                       }).toList(),
                     ),
                   ),
-                  //Category
-                  // Container(
-                  //   padding: EdgeInsets.symmetric(horizontal: 18, vertical: 12),
-                  //   alignment: Alignment.centerLeft,
-                  //   child: Text(
-                  //     "Ingredient",
-                  //     style: TextStyle(
-                  //         fontSize: 16,
-                  //         fontFamily: "bold",
-                  //         color: Theme.of(context).textTheme.caption.color),
-                  //   ),
-                  // ),
-                  // //
-                  // Container(
-                  //   padding: EdgeInsets.symmetric(horizontal: 18),
-                  //   child: Row(
-                  //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  //     children: [
-                  //       InkWell(
-                  //         onTap: () {
-                  //           // setState(() {
-                  //           //   title = "Fruit";
-                  //           // });
-                  //           // Navigator.push(context,
-                  //           //     _selectCategoriesScreenRoute());
-                  //         },
-                  //         child: Container(
-                  //           alignment: Alignment.centerLeft,
-                  //           child: Column(
-                  //             children: [
-                  //               Image.asset(
-                  //                 "assets/icons/ic_fruit.png",
-                  //                 scale: 1.8,
-                  //               ),
-                  //               Container(
-                  //                 padding: EdgeInsets.only(top: 5),
-                  //                 child: Text(
-                  //                   "Fruit",
-                  //                   style: TextStyle(
-                  //                       fontSize: 11,
-                  //                       fontFamily: "medium",
-                  //                       color: Theme.of(context)
-                  //                           .textTheme
-                  //                           .caption
-                  //                           .color),
-                  //                 ),
-                  //               )
-                  //             ],
-                  //           ),
-                  //         ),
-                  //       ),
-                  //       InkWell(
-                  //         onTap: () {
-                  //           // setState(() {
-                  //           //   title = "Bread";
-                  //           // });
-                  //           // Navigator.push(context,
-                  //           //     _selectCategoriesScreenRoute());
-                  //         },
-                  //         child: Container(
-                  //           alignment: Alignment.center,
-                  //           child: Column(
-                  //             children: [
-                  //               Image.asset(
-                  //                 "assets/icons/ic_bread.png",
-                  //                 scale: 1.8,
-                  //               ),
-                  //               Container(
-                  //                 padding: EdgeInsets.only(top: 5),
-                  //                 child: Text(
-                  //                   "Bread",
-                  //                   style: TextStyle(
-                  //                       fontSize: 11,
-                  //                       fontFamily: "medium",
-                  //                       color: Theme.of(context)
-                  //                           .textTheme
-                  //                           .caption
-                  //                           .color),
-                  //                 ),
-                  //               )
-                  //             ],
-                  //           ),
-                  //         ),
-                  //       ),
-                  //       InkWell(
-                  //         onTap: () {
-                  //           // setState(() {
-                  //           //   title = "Minum";
-                  //           // });
-                  //           // Navigator.push(context,
-                  //           //     _selectCategoriesScreenRoute());
-                  //         },
-                  //         child: Container(
-                  //           child: Column(
-                  //             children: [
-                  //               Image.asset(
-                  //                 "assets/icons/ic_minum.png",
-                  //                 scale: 1.8,
-                  //               ),
-                  //               Container(
-                  //                 padding: EdgeInsets.only(top: 5),
-                  //                 child: Text(
-                  //                   "Spice",
-                  //                   style: TextStyle(
-                  //                       fontSize: 11,
-                  //                       fontFamily: "medium",
-                  //                       color: Theme.of(context)
-                  //                           .textTheme
-                  //                           .caption
-                  //                           .color),
-                  //                 ),
-                  //               )
-                  //             ],
-                  //           ),
-                  //         ),
-                  //       ),
-                  //       InkWell(
-                  //         onTap: () {
-                  //           // Navigator.push(
-                  //           //     context, _categoriesScreenRoute());
-                  //         },
-                  //         child: Container(
-                  //           child: Column(
-                  //             children: [
-                  //               Image.asset(
-                  //                 "assets/icons/ic_more.png",
-                  //                 scale: 1.8,
-                  //               ),
-                  //               Container(
-                  //                 padding: EdgeInsets.only(top: 5),
-                  //                 child: Text(
-                  //                   "More",
-                  //                   style: TextStyle(
-                  //                       fontSize: 11,
-                  //                       fontFamily: "medium",
-                  //                       color: Theme.of(context)
-                  //                           .textTheme
-                  //                           .caption
-                  //                           .color),
-                  //                 ),
-                  //               )
-                  //             ],
-                  //           ),
-                  //         ),
-                  //       ),
-                  //     ],
-                  //   ),
-                  // ),
-                  //Recent
                   Container(
                     padding: EdgeInsets.only(
                         left: 18, right: 18, top: 12, bottom: 5),
@@ -455,10 +303,6 @@ class Body extends StatelessWidget {
                                                           _viewRecipeModel
                                                               .recipe[index]
                                                               .result))),
-                                              // child: Image.asset(
-                                              //   "assets/icons/ic_video.png",
-                                              //   scale: 3,
-                                              // ),
                                             ),
                                             //mid
                                             Container(
@@ -523,51 +367,6 @@ class Body extends StatelessWidget {
                                                       ],
                                                     ),
                                                   ),
-                                                  //
-                                                  // Container(
-                                                  //   child: Row(
-                                                  //     mainAxisAlignment:
-                                                  //         MainAxisAlignment
-                                                  //             .spaceBetween,
-                                                  //     children: [
-                                                  //       //
-                                                  //       Container(
-                                                  //         child: Text(
-                                                  //           // homePageScreenList[
-                                                  //           //         index]
-                                                  //           //     .minutes
-                                                  //           "a",
-                                                  //           style: TextStyle(
-                                                  //               fontSize: 11,
-                                                  //               fontFamily:
-                                                  //                   "bold",
-                                                  //               color: Theme.of(
-                                                  //                       context)
-                                                  //                   .textTheme
-                                                  //                   .caption
-                                                  //                   .color),
-                                                  //         ),
-                                                  //       ),
-                                                  //       Container(
-                                                  //         child: Text(
-                                                  //           // homePageScreenList[
-                                                  //           //         index]
-                                                  //           //     .views
-                                                  //           "a",
-                                                  //           style: TextStyle(
-                                                  //               fontSize: 11,
-                                                  //               fontFamily:
-                                                  //                   "bold",
-                                                  //               color: Theme.of(
-                                                  //                       context)
-                                                  //                   .textTheme
-                                                  //                   .caption
-                                                  //                   .color),
-                                                  //         ),
-                                                  //       )
-                                                  //     ],
-                                                  //   ),
-                                                  // )
                                                 ],
                                               ),
                                             ),
@@ -581,46 +380,16 @@ class Body extends StatelessWidget {
 
                                       //right
                                       InkWell(
-                                        onTap: () {
-                                          // if (homePageScreenList[
-                                          //             index]
-                                          //         .isSelected !=
-                                          //     null) {
-                                          //   if (homePageScreenList[
-                                          //           index]
-                                          //       .isSelected) {
-                                          //     itemChange(
-                                          //         false, index);
-                                          //   } else {
-                                          //     itemChange(true, index);
-                                          //   }
-                                          // }
-                                        },
+                                        onTap: () {},
                                         child: Container(
                                             padding: EdgeInsets.all(5),
-                                            child:
-                                                // homePageScreenList[index]
-                                                //                 .isSelected !=
-                                                //             null &&
-                                                //         homePageScreenList[index]
-                                                //             .isSelected
-                                                //     ?
-                                                //     Image.asset(
-                                                //         "assets/icons/ic_fav.png",
-                                                //         scale: 4,
-                                                //         color:
-                                                //             Theme.of(context)
-                                                //                 .textTheme
-                                                //                 .caption
-                                                //                 .color)
-                                                //     :
-                                                Image.asset(
-                                                    "assets/icons/ic_fav_border.png",
-                                                    scale: 4,
-                                                    color: Theme.of(context)
-                                                        .textTheme
-                                                        .caption
-                                                        .color)),
+                                            child: Image.asset(
+                                                "assets/icons/ic_fav_border.png",
+                                                scale: 4,
+                                                color: Theme.of(context)
+                                                    .textTheme
+                                                    .caption
+                                                    .color)),
                                       )
                                     ],
                                   ),

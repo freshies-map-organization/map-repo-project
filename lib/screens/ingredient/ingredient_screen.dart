@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:exercise3/screens/view.dart';
-import 'package:flutter/material.dart';
+
+import '../view.dart';
 
 import 'ingredient_viewmodel.dart';
 import 'widgets/bar.dart';
 import 'widgets/body.dart';
 
 class IngredientScreen extends StatefulWidget {
-  // const IngredientScreen({ Key? key }) : super(key: key);
-
   static Route route() =>
       MaterialPageRoute(builder: (context) => IngredientScreen());
 

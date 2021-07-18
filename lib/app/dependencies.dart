@@ -40,8 +40,6 @@ void init() {
   dependency
       .registerLazySingleton<IngredientService>(() => IngredientServiceRest());
   dependency.registerLazySingleton<UserService>(() => UserServiceRest());
-  // dependency.registerLazySingleton<CounterService>(() => CounterServiceMock());
-  // dependency.registerLazySingleton<AuthService>(() => AuthServiceMock());
 
   // Viewmodels
   dependency.registerLazySingleton(() => UserViewmodel());

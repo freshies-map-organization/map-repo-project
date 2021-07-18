@@ -1,7 +1,7 @@
-import 'package:exercise3/screens/main/main_viewmodel.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+import '../../../main/main_viewmodel.dart';
 import './bar.dart';
 
 class UnsignedInBar extends Bar {

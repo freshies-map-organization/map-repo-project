@@ -34,10 +34,13 @@ class Body extends StatelessWidget {
           ),
           delegate: SliverChildBuilderDelegate(
             (BuildContext context, int index) {
-              return Container(
-                alignment: Alignment.center,
-                color: Colors.teal[100],
-                child: Text('${_data.ingredient[index]}'),
+              return InkWell(
+                onTap: () => Navigator.pushNamed(context, "/ingredient"),
+                child: Container(
+                  alignment: Alignment.center,
+                  color: Colors.teal[100],
+                  child: Text('${_data.ingredient[index]}'),
+                ),
               );
             },
             childCount: _data.ingredient.length,

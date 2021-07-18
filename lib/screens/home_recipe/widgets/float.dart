@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-// import '../counter_viewmodel.dart';
 import '../homerecipe_viewmodel.dart';
 
 class Float extends StatelessWidget {
@@ -18,21 +17,15 @@ class Float extends StatelessWidget {
             FloatingActionButton(
                 child: Icon(Icons.add),
                 heroTag: null,
-                onPressed: () => Navigator.pushNamed(context, '/ingredient')
-                // _onPressPlusButton(context),
-                ),
+                onPressed: () => Navigator.pushNamed(context, '/ingredient')),
             FloatingActionButton(
                 child: Icon(Icons.book),
                 heroTag: null,
-                onPressed: () => Navigator.pushNamed(context, '/myRecipe')
-                // _onPressPlusButton(context),
-                ),
+                onPressed: () => Navigator.pushNamed(context, '/myRecipe')),
             FloatingActionButton(
                 child: Icon(Icons.picture_in_picture),
                 heroTag: null,
-                onPressed: () => Navigator.pushNamed(context, '/profile')
-                // _onPressPlusButton(context),
-                ),
+                onPressed: () => Navigator.pushNamed(context, '/profile')),
           ],
         ),
       ],

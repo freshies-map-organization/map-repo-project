@@ -1,10 +1,10 @@
-import 'package:exercise3/screens/main/counter_viewmodel.dart';
-import 'package:exercise3/screens/view.dart';
 import 'package:flutter/material.dart';
 
+import '../../main/main_viewmodel.dart';
+
 class Body extends StatelessWidget {
-  final CounterViewmodel _viewmodel;
-  const Body(CounterViewmodel viewmodel) : _viewmodel = viewmodel;
+  final MainViewmodel _viewmodel;
+  const Body(MainViewmodel viewmodel) : _viewmodel = viewmodel;
 
   @override
   Widget build(BuildContext context) {

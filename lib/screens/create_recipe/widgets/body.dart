@@ -1,11 +1,10 @@
-import 'package:exercise3/models/recipe.dart';
-import 'package:exercise3/screens/create_recipe/create_recipe_screen.dart';
-import 'package:exercise3/screens/create_recipe/create_recipe_viewmodel.dart';
-import 'package:exercise3/screens/view.dart';
 import 'package:flutter/material.dart';
 
+import 'package:exercise3/models/recipe.dart';
+import 'package:exercise3/screens/create_recipe/create_recipe_viewmodel.dart';
+import 'package:exercise3/screens/view.dart';
+
 class Body extends StatelessWidget {
-  // const Body({ Key? key }) : super(key: key);
   final CreateRecipeViewModel _viewRecipeModel;
   Body({viewmodel}) : _viewRecipeModel = viewmodel;
 
@@ -104,13 +103,6 @@ class Body extends StatelessWidget {
               SizedBox(
                 height: 30.0,
               ),
-              // Column(
-              //   mainAxisAlignment: MainAxisAlignment.center,
-              //   children: [
-              //     FlatButton(onPressed: selectFile, child: Text("Select File")),
-              //   ],
-              // ),
-              // ButtonBar(),
               SizedBox(
                 height: 15.0,
               ),

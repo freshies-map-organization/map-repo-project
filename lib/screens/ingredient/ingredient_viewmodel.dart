@@ -1,7 +1,7 @@
-import 'package:exercise3/models/ingredient.dart';
-import 'package:exercise3/services/ingredient/ingredient_service.dart';
-
+import '../../models/ingredient.dart';
+import '../../services/ingredient/ingredient_service.dart';
 import '../../app/dependencies.dart';
+
 import '../viewmodel.dart';
 
 class IngredientViewModel extends Viewmodel {

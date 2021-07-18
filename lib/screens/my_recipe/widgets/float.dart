@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
 class Float extends StatelessWidget {
-  // const Float({ Key? key }) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Column(

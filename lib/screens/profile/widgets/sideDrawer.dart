@@ -1,12 +1,9 @@
-import 'package:exercise3/screens/view.dart';
 import 'package:flutter/material.dart';
 
+import '../../../screens/view.dart';
 import '../profile_viewmodel.dart';
 
-// import '../homerecipe_viewmodel.dart';
-
 class SideDrawer extends StatefulWidget {
-  // const SideDrawer({ Key? key }) : super(key: key);
   final ProfileViewModel _viewRecipeModel;
   SideDrawer(viewmodel) : _viewRecipeModel = viewmodel;
   @override
@@ -33,7 +30,6 @@ class _SideDrawerState extends State<SideDrawer> {
                 InkWell(
                   onTap: () {
                     Navigator.pop(context);
-                    // Navigator.push(context, _logInScreenRoute());
                   },
                   child: Container(
                     height: 40,
@@ -54,10 +50,7 @@ class _SideDrawerState extends State<SideDrawer> {
                         Container(
                           padding: EdgeInsets.only(left: 11),
                           child: Text(
-                            // userName == null ?
-                            "${viewmodel.user.name}"
-                            //  : userName
-                            ,
+                            "${viewmodel.user.name}",
                             overflow: TextOverflow.ellipsis,
                             style: TextStyle(
                                 fontSize: 17,
@@ -196,7 +189,6 @@ class _SideDrawerState extends State<SideDrawer> {
                         InkWell(
                           onTap: () {
                             Navigator.pop(context);
-                            // Navigator.push(context, _favouriteScreenRoute());
                           },
                           child: Container(
                             height: 55,
@@ -273,7 +265,6 @@ class _SideDrawerState extends State<SideDrawer> {
                         InkWell(
                           onTap: () {
                             Navigator.pop(context);
-                            // Navigator.push(context, _settingScreenRoute());
                           },
                           child: Container(
                             height: 55,

@@ -2,10 +2,14 @@ import '../../app/dependencies.dart';
 import '../../services/counter/counter_service.dart';
 import '../../models/user.dart';
 import '../../models/counter.dart';
+
 import '../user/user_viewmodel.dart';
 import '../viewmodel.dart';
 
 class MainViewmodel extends Viewmodel {
+  final MainViewmodel _mainViewmodel;
+  MainViewmodel({mainViewmodel}) : _mainViewmodel = mainViewmodel;
+
   UserViewmodel get _userViewmodel => dependency();
   User get user => _userViewmodel.user;
   set user(User value) => update(() async => _userViewmodel.user = value);

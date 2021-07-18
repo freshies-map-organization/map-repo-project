@@ -1,11 +1,12 @@
-import 'package:exercise3/screens/home_recipe/widgets/float.dart';
-import 'package:exercise3/screens/home_recipe/widgets/sideDrawer.dart';
-import 'package:exercise3/screens/main/main_viewmodel.dart';
-import 'package:exercise3/screens/view.dart';
 import 'package:flutter/material.dart';
 
-import 'homerecipe_viewmodel.dart';
+import '../../screens/main/main_viewmodel.dart';
+import '../../screens/view.dart';
+
+import 'widgets/sideDrawer.dart';
 import 'widgets/body.dart';
+
+import 'homerecipe_viewmodel.dart';
 
 class HomeRecipeScreen extends StatefulWidget {
   static Route route() =>
@@ -27,14 +28,12 @@ class _HomeRecipeScreenState extends State<HomeRecipeScreen> {
             viewmodel: MainViewmodel(),
             builder: (_, mainViewmodel, __) {
               final _recipeViewmodel =
-                  // RecipeViewModel(mainViewmodel: mainViewmodel);
                   HomeRecipeViewModel(mainViewmodel: mainViewmodel);
 
               return Scaffold(
                 key: mainDrawerKey,
                 drawer: SideDrawer(_recipeViewmodel),
                 body: Body(_recipeViewmodel, mainDrawerKey),
-                // floatingActionButton: Float(_recipeViewmodel),
               );
             }),
       ),

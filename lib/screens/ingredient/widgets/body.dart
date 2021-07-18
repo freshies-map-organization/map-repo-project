@@ -1,11 +1,10 @@
-import 'package:exercise3/models/ingredient.dart';
 import 'package:flutter/material.dart';
+
+import '../../../models/ingredient.dart';
 
 import '../ingredient_viewmodel.dart';
 
 class Body extends StatelessWidget {
-  // const Body({ Key? key }) : super(key: key);
-
   final IngredientViewModel _viewIngredientModel;
   const Body(viewmodel) : _viewIngredientModel = viewmodel;
 
@@ -17,6 +16,8 @@ class Body extends StatelessWidget {
           if (snapshot.hasData) {
             _viewIngredientModel.ingredient = snapshot.data;
             return _buildIngredientListView();
+          } else {
+            return Center(child: CircularProgressIndicator());
           }
         });
   }
@@ -31,6 +32,8 @@ class Body extends StatelessWidget {
           itemBuilder: (context, index) {
             return ListTile(
               title: Text('${_viewIngredientModel.ingredient[index].name}'),
+              subtitle: Text(
+                  '${_viewIngredientModel.ingredient[index].ingredientType}'),
             );
           });
   }

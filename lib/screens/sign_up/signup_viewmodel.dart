@@ -1,6 +1,4 @@
 import '../../app/dependencies.dart';
-import '../viewmodel.dart';
-import '../../app/dependencies.dart';
 import '../../services/auth/auth_service.dart';
 import '../../models/user.dart';
 import '../viewmodel.dart';

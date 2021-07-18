@@ -1,11 +1,9 @@
-import 'package:exercise3/models/recipe.dart';
 import 'package:flutter/material.dart';
 
+import '../../../models/recipe.dart';
 import '../my_recipe_viewmodel.dart';
 
 class Body extends StatelessWidget {
-  // const Body({ Key? key }) : super(key: key);
-
   final MyRecipeViewModel _myRecipeModel;
   const Body(viewmodel) : _myRecipeModel = viewmodel;
 
@@ -42,16 +40,7 @@ class Body extends StatelessWidget {
                       _recipeDelete(context, _myRecipeModel.recipe[index].uid),
                 ),
               ]),
-              onTap:
-                  // () {
-                  //   ScaffoldMessenger.of(context).showSnackBar(
-                  //     const SnackBar(
-                  //       content: Text('A SnackBar has been shown.'),
-                  //     ),
-                  //   );
-                  // },
-                  // {print(_viewRecipeModel.recipe[index].ingredient[1])}
-                  () => _recipeDetail(context, _myRecipeModel.recipe[index]),
+              onTap: () => _recipeDetail(context, _myRecipeModel.recipe[index]),
               onLongPress: () {},
             );
           });

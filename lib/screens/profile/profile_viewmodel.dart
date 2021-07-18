@@ -1,8 +1,8 @@
-import 'package:exercise3/models/user.dart';
-import 'package:exercise3/screens/main/main_viewmodel.dart';
-import 'package:exercise3/screens/user/user_viewmodel.dart';
-
+import '../../models/user.dart';
 import '../../app/dependencies.dart';
+
+import '../main/main_viewmodel.dart';
+import '../user/user_viewmodel.dart';
 import '../viewmodel.dart';
 
 class ProfileViewModel extends Viewmodel {

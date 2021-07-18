@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import './bar.dart';
 import '../../main_viewmodel.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class SignedInBar extends Bar {
   final MainViewmodel _viewmodel;
@@ -11,12 +11,9 @@ class SignedInBar extends Bar {
   @override
   Widget build(BuildContext context) {
     return Bar(
-      title: _viewmodel.user.name,
-      image: NetworkImage(_viewmodel.user.photoUrl),
       button: IconButton(
           icon: Icon(
             FontAwesomeIcons.lockOpen,
-            //color: Colors.red,
           ),
           onPressed: () => _onPressLogoutButton()),
     );

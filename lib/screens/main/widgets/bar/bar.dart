@@ -1,8 +1,4 @@
 import 'package:flutter/material.dart';
-// import 'unsigned_in_bar.dart';
-// import 'package:exercise3/screens/main/main_viewmodel.dart';
-// import 'package:exercise3/screens/view.dart';
-// import 'signed_in_bar.dart';
 
 class Bar extends StatelessWidget implements PreferredSizeWidget {
   @override
@@ -31,10 +27,6 @@ class Bar extends StatelessWidget implements PreferredSizeWidget {
             style: TextStyle(
               fontWeight: FontWeight.bold,
             ),
-          ),
-          Text(
-            _title,
-            style: TextStyle(fontSize: 12.0),
           ),
         ],
       ),

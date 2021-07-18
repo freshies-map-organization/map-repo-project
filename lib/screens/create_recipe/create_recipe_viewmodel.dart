@@ -1,9 +1,9 @@
-import 'package:exercise3/models/recipe.dart';
-import 'package:exercise3/models/user.dart';
-import 'package:exercise3/screens/user/user_viewmodel.dart';
-import 'package:exercise3/services/recipe/recipe_service.dart';
-
 import '../../app/dependencies.dart';
+import '../../models/recipe.dart';
+import '../../models/user.dart';
+import '../../services/recipe/recipe_service.dart';
+
+import '../user/user_viewmodel.dart';
 import '../viewmodel.dart';
 
 class CreateRecipeViewModel extends Viewmodel {
@@ -11,8 +11,6 @@ class CreateRecipeViewModel extends Viewmodel {
   UserViewmodel get _userViewModel => dependency();
 
   User get user => _userViewModel.user;
-
-  // Recipe get recipe => service.recipe;
 
   Recipe _newRecipe = Recipe();
 
@@ -23,6 +21,10 @@ class CreateRecipeViewModel extends Viewmodel {
   String _title;
   String _description;
 
+  List<String> _ingredientList;
+
+  get ingredientList => _ingredientList;
+
   get recipe => _newRecipe;
   set recipe(value) => _newRecipe = value;
 
@@ -32,17 +34,11 @@ class CreateRecipeViewModel extends Viewmodel {
   get description => _description;
   set description(value) => _description = value;
 
-  // get user => _newRecipe.user;
-  // set user(value) => _newRecipe.user = value;
-
   get result => _newRecipe.result;
   set result(value) => _newRecipe.result = value;
 
   get shared => _newRecipe.shared;
   set shared(value) => _newRecipe.shared = value;
-
-  // get step => _newRecipe.step;
-  // set step(value) => _newRecipe.step = value;
 
   get stepOne => _stepOne;
   set stepOne(value) => _stepOne = value;
@@ -55,8 +51,6 @@ class CreateRecipeViewModel extends Viewmodel {
 
   get ingredientTwo => _ingredientTwo;
   set ingredientTwo(value) => _ingredientTwo = value;
-
-  // get user => _user;
 
   get userID => user.id;
 
@@ -74,11 +68,8 @@ class CreateRecipeViewModel extends Viewmodel {
   }
 
   Future<Recipe> createRecipe() async {
-    // turnBusy();
     Recipe recipeNew = createRecipe2();
     final Recipe recipeReturn = await service.addRecipe(recipe: recipeNew);
     return recipeReturn;
   }
-
-  // Future selectFile
 }
