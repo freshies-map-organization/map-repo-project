@@ -11,6 +11,7 @@ class SignedInBar extends Bar {
   @override
   Widget build(BuildContext context) {
     return Bar(
+      image: AssetImage('assets/images/yummyfood.jpg'),
       button: IconButton(
           icon: Icon(
             FontAwesomeIcons.lockOpen,
